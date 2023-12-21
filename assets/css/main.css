@@ -305,12 +305,18 @@ section {
   .navbar {
     display: none;
     position: fixed;
-    background-color: #fff;
     width: 300px;
     top: 0;
     bottom: 0;
-    right: 0;
+    right: -300px;
+    background-color: #fff;
+    box-shadow: -2px 0 16px rgba(0, 0, 0, 0.1);
+    transition: 2s;
   }
+}
+.navbar.open {
+  display: flex;
+  right: 0;
 }
 @media (max-width: 991.98px) {
   .navbar__list {
